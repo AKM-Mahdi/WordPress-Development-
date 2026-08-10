@@ -4,6 +4,13 @@ function project_post_type() {
 			'labels'      => array(
 				'name'          => "Projects",
 				'singular_name' => "Project",
+				'add_new'       => "Add Project",
+				'add_new_item'  => "Add New Project",
+				'edit_item'     => "Edit Project",
+				'new_item'      => "New Project",
+				'view_item'     => "View Project",
+				'search_items'  => "Search Projects",
+				'not_found'     => "No projects found",
 			),
 			'public'      => true,
 			'has_archive' => true,
@@ -23,6 +30,4 @@ function project_post_type() {
 		)
 	);
 }
-
-
 add_action('init', 'project_post_type');
