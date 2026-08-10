@@ -1,0 +1,28 @@
+function project_post_type() {
+	register_post_type('project',
+		array(
+			'labels'      => array(
+				'name'          => "Projects",
+				'singular_name' => "Project",
+			),
+			'public'      => true,
+			'has_archive' => true,
+			'supports'    => array(
+				'title',
+				'editor',
+				'author',
+				'thumbnail',
+				'excerpt',
+				'trackbacks',
+				'custom-fields',
+				'comments',
+				'revisions',
+				'page-attributes',
+				'post-formats',
+			),
+		)
+	);
+}
+
+
+add_action('init', 'project_post_type');
